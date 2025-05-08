@@ -80,5 +80,4 @@ Pull requests are welcome! If you'd like to suggest improvements or fix issues, 
 **Khaled Alam**
 
 📧 [khaledalam.net@gmail.com](mailto:khaledalam.net@gmail.com)<br />
-🌍 [Website](https://khaledalam.net/) | [LinkedIn](https://www.linkedin.com/in/khaledalam/) | [X(Twitter)](https://x.com/khaledalamxyz
-)
+🌍 [Website](https://khaledalam.net/) | [LinkedIn](https://www.linkedin.com/in/khaledalam/) | [X(Twitter)](https://x.com/khaledalamxyz)
