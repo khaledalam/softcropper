@@ -7,7 +7,7 @@
 
 ---
 
-![Overview](./tests/softcropper.png)
+<img src="https://raw.githubusercontent.com/khaledalam/softcropper/main/tests/softcropper.png" />
 
 ---
 
@@ -15,8 +15,8 @@
 
 | Before | ➡️ | After |
 |--------|----|-------|
-| <sub>Baby.webp (600×900)</sub><br><img src="./tests/assets/baby.webp" width="150"/> |  | <sub>Output (900×900)</sub><br><img src="./tests/assets/output/baby.webp" width="150"/> |
-| <sub>Kid.jpg (1100×733)</sub><br><img src="./tests/assets/kid.jpg" width="150"/> |  | <sub>Output (1100×1100)</sub><br><img src="./tests/assets/output/kid.jpg" width="150"/> |
+| <sub>Baby.webp (600×900)</sub><br><img src="https://raw.githubusercontent.com/khaledalam/softcropper/main/tests/assets/baby.webp" width="150"/> |  | <sub>Output (900×900)</sub><br><img src="https://raw.githubusercontent.com/khaledalam/softcropper/main/tests/assets/output/baby.webp" width="150"/> |
+| <sub>Kid.jpg (1100×733)</sub><br><img src="https://raw.githubusercontent.com/khaledalam/softcropper/main/tests/assets/kid.jpg" width="150"/> |  | <sub>Output (1100×1100)</sub><br><img src="https://raw.githubusercontent.com/khaledalam/softcropper/main/tests/assets/output/kid.jpg" width="150"/> |
 
 ---
 

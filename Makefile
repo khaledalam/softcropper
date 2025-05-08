@@ -24,6 +24,10 @@ build:
 	@rm -rf dist
 	@$(PYTHON) setup.py sdist bdist_wheel
 
+deploy:
+	@make build
+	@twine upload dist/*
+
 clean:
 	@rm -rf $(VENV) dist *.egg-info __pycache__ .pytest_cache
 	@find . -type d -name "__pycache__" -exec rm -r {} +
