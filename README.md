@@ -3,7 +3,8 @@
 
 [![PyPI version](https://badge.fury.io/py/softcropper.svg)](https://pypi.org/project/softcropper/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/khaledalam/softcropper/test.yml?branch=main)](https://github.com/khaledalam/softcropper/actions)
+[![Build Status](https://github.com/khaledalam/softcropper/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/khaledalam/softcropper/actions/workflows/test.yml)
+(https://github.com/khaledalam/softcropper/actions)
 [![Python](https://img.shields.io/badge/python-≥3.7-blue.svg)](https://www.python.org/)
 
 **SoftCropper** is a Python tool that automatically resizes rectangular images into squares and adds soft, blurred borders — ideal for prepping images for print or display.
