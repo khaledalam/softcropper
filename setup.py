@@ -3,7 +3,12 @@ from setuptools import setup, find_packages
 
 setup(
     name="softcropper",
-    version="0.1.0",
+    version="0.1.2",
+    url="https://github.com/khaledalam/softcropper",
+    project_urls={
+        "Source": "https://github.com/khaledalam/softcropper",
+        "Tracker": "https://github.com/khaledalam/softcropper/issues",
+    },
     packages=find_packages(),
     install_requires=["opencv-python", "numpy"],
     entry_points={
