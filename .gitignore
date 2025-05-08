@@ -1,0 +1,16 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Package builds
+*.egg-info/
+dist/
+build/
+
+# Test outputs
+tests/assets/output/
+
+# Virtual environments
+.venv/
+env/
+ENV/
