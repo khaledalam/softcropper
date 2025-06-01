@@ -49,17 +49,21 @@ pip install softcropper
 ## ⚙️ Usage
 
 ```bash
-softcropper ./path/input_photos ./path/output_ready
+softcropper ./path/input_photos ./path/output_ready --mode blur
 ```
 - input_photos: folder with png, jpg, jpeg, or webp files
 - output_photos: optional (defaults to ./input_photos/output/)
-
+- modes: blur, solid, gradient
 
 ## ✅ Testing
 
 ```bash
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest tests/test_softcropper.py -v
 ```
+
+## 📄 Changelog
+✨ [CHANGELOG.md](./CHANGELOG.md)
+
 
 ## 🛠️ Makefile Commands
 
