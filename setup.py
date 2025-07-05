@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="softcropper",
-    version="0.1.8",
+    version="0.1.9",
     url="https://github.com/khaledalam/softcropper",
     project_urls={
         "Source": "https://github.com/khaledalam/softcropper",
