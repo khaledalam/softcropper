@@ -207,12 +207,13 @@ def process_images(
             # BORDER
             squared_image, x_offset, y_offset, _ = make_square(image)
             
-            final_image = None
+            final_image = squared_image.copy()
+            
             if add_border:
-                final_image = add_borders(squared_image, image, x_offset, y_offset, mode=mode)
+                final_image = add_borders(final_image, image, x_offset, y_offset, mode=mode)
             
             if text and (left_text or right_text or top_text or bottom_text):
-                final_image = add_text_around_image(final_image if final_image else image, left_text, right_text, top_text, bottom_text)
+                final_image = add_text_around_image(final_image, left_text, right_text, top_text, bottom_text)
 
             if target_size:
                 final_image = cv2.resize(final_image, target_size)

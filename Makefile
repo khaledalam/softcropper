@@ -1,8 +1,8 @@
 # SoftCropper Makefile
 
 VENV ?= .venv
-PYTHON := $(VENV)/bin/python
-PIP := $(VENV)/bin/pip
+PYTHON := $(VENV)/bin/python3
+PIP := $(VENV)/bin/pip3
 PYTEST := PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 $(VENV)/bin/pytest
 
 .PHONY: all venv install test clean build
@@ -10,8 +10,9 @@ PYTEST := PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 $(VENV)/bin/pytest
 all: test
 
 venv:
-	@test -d $(VENV) || python3 -m venv $(VENV) || source .venv/bin/activate
-	@$(PIP) install --upgrade pip
+	@python3 -m venv $(VENV)
+	@$(VENV)/bin/python -m ensurepip --upgrade
+	@$(VENV)/bin/python -m pip install --upgrade pip
 
 install: venv
 	@$(PIP) install -e .
