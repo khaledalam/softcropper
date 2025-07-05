@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.8] – 2025-07-05
+
+### ✨ Added
+- ➕ `--border` flag to draw rounded border around image content
+- ➕ `--text` flag to enable left, right, top, and bottom edge text
+- ➕ `--left`, `--right`, `--top`, `--bottom` flags for customizable annotations
+- ➕ `--a4` flag to generate paginated A4 collage output
+- ➕ `--size WxH` flag to resize final output in `mm` or `cm` units
+
+### 🛠️ Fixed
+- ✅ Resolved OpenCV image save error on empty/missing images
+- ✅ Fixed bottom text rendering bug where top text was reused
+
+---
+
 ## [0.1.5] – 2025-06-01
 
 ### ✨ Added
@@ -24,4 +39,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### ✨ Added
 - 🚀 Initial CLI tool with default `blur` mode.
-

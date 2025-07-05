@@ -15,8 +15,10 @@ venv:
 	@$(VENV)/bin/python -m pip install --upgrade pip
 
 install: venv
+	@$(PIP) install --upgrade pip setuptools wheel twine build
 	@$(PIP) install -e .
 	@$(PIP) install pytest
+
 
 test: install
 	@$(PYTEST) tests -v
@@ -25,9 +27,9 @@ build:
 	@rm -rf dist
 	@$(PYTHON) setup.py sdist bdist_wheel
 
-deploy:
+deploy: install
 	@make build
-	@twine upload dist/*
+	@$(VENV)/bin/twine upload dist/*
 
 clean:
 	@rm -rf $(VENV) dist *.egg-info __pycache__ .pytest_cache

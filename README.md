@@ -1,4 +1,3 @@
-
 # SoftCropper
 
 [![PyPI version](https://badge.fury.io/py/softcropper.svg)](https://pypi.org/project/softcropper/)
@@ -6,9 +5,9 @@
 [![Build Status](https://github.com/khaledalam/softcropper/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/khaledalam/softcropper/actions/workflows/test.yml)
 [![Python](https://img.shields.io/badge/python-≥3.7-blue.svg)](https://www.python.org/)
 
-**SoftCropper** is a Python tool that automatically resizes rectangular images into squares and adds soft, blurred borders — ideal for prepping images for print or display.
+**SoftCropper** is a powerful CLI tool that transforms rectangular images into square, print-ready formats with aesthetic borders and customizable text annotations — built for precision and automation.
 
-> _This package is part of the internal tools used at [CanvasMagnet](https://www.instagram.com/canvamagnet/) for order preparation and production automation._
+> _Actively used by [CanvasMagnet](https://www.instagram.com/canvamagnet/) for order prep and A4 layout automation._
 
 ---
 
@@ -25,11 +24,17 @@
 
 ---
 
+A4:
+<img src="https://raw.githubusercontent.com/khaledalam/softcropper/main/tests/assets/a4_page_01.jpg" width="600"/>
+
 ## 🚀 Features
 
-- Pads any image to a perfect square
-- Fills padding using soft Gaussian blur from original image
-- Automatically saves output in a separate folder
+- ✅ Auto-square images with optional blurred/solid/gradient padding
+- 🖼️ Add customizable **rounded borders** around photos
+- ✍️ Annotate left/right/top/bottom with vertical or centered text (great for branding)
+- 📄 Generate auto-arranged **A4 collage pages** from processed photos
+- 📐 Resize final output by target size (e.g. `--size 5.5x5.5cm` or `--size 55x55mm`)
+- 🧪 Includes CLI, Makefile, tests, and PyPI packaging
 
 ---
 
@@ -38,7 +43,8 @@
 - Python `>= 3.7`
 - `opencv-python`
 - `numpy`
-  
+
+---
 
 ## 🔧 Installation
 
@@ -46,42 +52,84 @@
 pip install softcropper
 ```
 
-## ⚙️ Usage
+For local development:
 
 ```bash
-softcropper ./path/input_photos ./path/output_ready --mode blur
+make venv
+make install
 ```
-- input_photos: folder with png, jpg, jpeg, or webp files
-- output_photos: optional (defaults to ./input_photos/output/)
-- modes: blur, solid, gradient
+
+---
+
+## ⚙️ CLI Usage
+
+```bash
+softcropper ./input_photos --mode blur --border --text \
+  --left "@CanvaMagnet" \
+  --right "+971 545800462" \
+  --top "Preview" \
+  --bottom "www.CanvaMagnet.com" \
+  --size 5.5x5.5cm \
+  --a4
+```
+
+### Options
+
+| Flag           | Description                                               |
+|----------------|-----------------------------------------------------------|
+| `--mode`       | One of: `blur` (default), `solid`, `gradient`             |
+| `--border`     | Add rounded frame around photo                            |
+| `--text`       | Enable text mode (requires at least one `--left/right/top/bottom`) |
+| `--left`       | Vertical text on left side                                |
+| `--right`      | Vertical text on right side                               |
+| `--top`        | Centered text above the image                             |
+| `--bottom`     | Centered text below the image                             |
+| `--size`       | Resize output image (supports `mm` or `cm`, e.g. `55x55mm`) |
+| `--a4`         | Generate A4 page(s) from processed images                 |
+
+---
 
 ## ✅ Testing
 
 ```bash
-PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest tests/test_softcropper.py -v
+make test
 ```
 
-## 📄 Changelog
-✨ [CHANGELOG.md](./CHANGELOG.md)
+Or manually:
 
+```bash
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest tests/ -v
+```
+
+---
 
 ## 🛠️ Makefile Commands
 
+```bash
+make venv         # Create .venv
+make install      # Install locally in editable mode
+make test         # Run tests
+make build        # Build wheel and source dist
+make deploy       # Deploy to PyPI
+make clean        # Remove virtualenv + build artifacts
 ```
-make venv         # create .venv
-make install      # install in editable mode
-make test         # run unit/integration tests
-make build        # build for PyPI
-make clean        # remove all build artifacts and caches
-```
+
+---
+
+## 📄 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md)
+
+---
 
 ## 🤝 Contribution
-Pull requests are welcome! If you'd like to suggest improvements or fix issues, feel free to fork and submit.
 
+Pull requests are welcome! Open an issue or fork and submit a PR if you'd like to improve SoftCropper.
+
+---
 
 ## Author
 
-**Khaled Alam**
-
-📧 [khaledalam.net@gmail.com](mailto:khaledalam.net@gmail.com)<br />
-🌍 [Website](https://khaledalam.net/) | [LinkedIn](https://www.linkedin.com/in/khaledalam/) | [X(Twitter)](https://x.com/khaledalamxyz)
+**Khaled Alam**  
+📧 [khaledalam.net@gmail.com](mailto:khaledalam.net@gmail.com)  
+🌍 [Website](https://khaledalam.net/) | [LinkedIn](https://www.linkedin.com/in/khaledalam/) | [Twitter/X](https://x.com/khaledalamxyz)
